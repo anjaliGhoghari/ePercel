@@ -1,0 +1,645 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --Blue: #2f0c60;
+    --yellow: #fdc300;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 1.75rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.primary-button {
+    color: var(--Blue);
+    text-align: right;
+
+    font-family: Sora;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    /* 155.556% */
+    margin-right: 40px;
+    padding: 14px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 12px;
+    background: #FFF;
+    box-sizing: border-box;
+}
+
+.primary-button:hover {
+    border: 2px solid #2F0C60;
+    box-sizing: border-box;
+}
+
+.secondory-button {
+    border-radius: 12px;
+    border: 1px solid #2F0C60;
+    background: #2F0C60;
+    color: #FFF;
+    text-align: center;
+    font-family: Sora;
+    font-size: 15.75px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 12px 32px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures that borders and padding are included in the button's total size */
+}
+
+.secondory-button:hover {
+    background-color: white;
+    color: #2F0C60;
+    font-weight: 600;
+    /* Use box-shadow to simulate border without changing size */
+    box-shadow: inset 0 0 0 2px #2F0C60;
+    box-sizing: border-box; /* Prevents hover effects from changing the overall size */
+}
+
+
+.third-button {
+    border-radius: 12px;
+
+    padding: 0px 32px;
+    justify-content: center;
+    align-items: center;
+    color: #2F0C60;
+    font-family: Sora;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+    background-color: var(--yellow);
+    width: 100%;
+ 
+}
+
+.third-button:hover {
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: inset 0 0 0 3px #2F0C60;
+
+}
+
+  
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    margin-bottom: 160px;
+    overflow: hidden;
+    padding-inline: 15px;
+} 
+   
+
+
+
+/* header sectiob */
+
+
+.header-section {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.header-container {
+    display: flex;
+
+    margin-inline: 5%;
+    justify-content: space-between;
+
+    background-color: var(--yellow);
+    height: 100px;
+    align-items: center;
+    padding-bottom: 16px;
+    position: sticky;
+    z-index: 2;
+
+    border-radius: 0 0 32px 32px;
+}
+
+.header-container img {
+    width: 120px;
+    margin-left: 40px;
+}
+
+
+
+/* hero-section */
+.hero-section {
+    margin-top: 200px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-basis: 40vw;
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInLeft 2.6s ease-in-out forwards;
+}
+
+.hero-left h1 {
+    color: black;
+    font-family: Sora;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: -4.8px;
+}
+
+.hero-left span {
+    color: var(--yellow);
+}
+
+.hero-left p {
+    color: black;
+    font-family: Sora;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.hero-left h3 {
+    color: var(--yellow);
+    font-family: Sora;
+    font-weight: 700;
+    line-height: 28.8px;
+    margin-top: 57px;
+}
+
+.hero-right {
+    flex-basis: 50%;
+    width: 100%;
+    background-image: url(./Assets/bg.png);
+    background-size: cover;
+    border-radius: 24px;
+}
+
+.right-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 16px;
+    align-items: center;
+    width: 100%; 
+}
+
+.text-wrapper {
+    background-color: white;
+    padding: 12px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0px 16px 80.6px 0px rgba(0, 0, 0, 0.20);
+    margin: 64px;
+}
+
+.text-wrapper h3 {
+    color: #2F0C60;
+    font-family: Sora;
+    font-size: 4rem;
+    line-height: 106.747%;
+    letter-spacing: -3.2px;
+    margin-bottom: 64px;
+}
+
+.input {
+    border-radius: 6px;
+    border: 1px solid #DEE2E6;
+    background: #FFF;
+    color: rgba(33, 37, 41, 0.75);
+    font-family: Sora;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    padding: 12px 32px;
+    align-self: stretch;
+}
+
+/* .shipping-rate */
+
+.shipping-rate-section {
+    margin-block: 80px;
+    text-align: center;
+}
+
+.shipping-rate-text h1 {
+    color: #000;
+    text-align: center;
+    font-family: Sora;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    /* 48px */
+    letter-spacing: -2.4px;
+}
+
+.shipping-rate-text p {
+    color: #000;
+    text-align: center;
+    font-family: Sora;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-block: 16px;
+}
+
+.shipping-rate-wrapper {
+    background-color: var(--yellow);
+    border-radius: 24px;
+    margin-top: 56px;
+    display: flex;
+    padding: 80px;
+    gap: 24px;
+}
+
+.shipping-rate-left {
+    background-color: white;
+    border-radius: 24px;
+    max-height: 450px;
+    padding: 24px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+
+}
+
+.shipping-rate-left p {
+    color: #8A8A8A;
+    font-family: Sora;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    /* 185.714% */
+}
+
+.shipping-rate-left p span {
+    color: red;
+}
+
+.shipping-rate-left label {
+    color: #8A8A8A;
+    font-family: Sora;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    /* 150% */
+}
+
+.shipping-rate-left select {
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+    color: #444;
+    font-family: Sora;
+    font-size: 15.875px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 176.378% */
+}
+
+.button-set {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 24px;
+}
+
+.button-set button {
+    display: flex;
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.shipping-rate-right {
+    background-color: white;
+    border-radius: 24px;
+    max-height: 450px;
+    padding: 24px;
+    width: 70%;
+}
+
+.shipping-rate-table {
+    background: var(--Blue);
+    color: #FFF;
+    font-family: Sora;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    /* 150% */
+    border-radius: 8px 8px 8px 8px;
+    width: 100%;
+
+}
+
+
+/* client card section */
+
+.client-section {
+    margin-block: 80px;
+    color: white;
+}
+
+.client-section h2 {
+    color: #000;
+    text-align: center;
+    font-family: Sora;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    /* 48px */
+    letter-spacing: -2.4px;
+    margin-bottom: 24px;
+}
+
+.cards {
+    justify-content: space-between;
+    display: flex;
+    animation: moveLogos 20s linear infinite;
+}
+
+@keyframes moveLogos {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translatex(-100%);
+    }
+}
+
+.card-wrapper {
+    padding-top: 80px;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.card {
+    border-radius: 24px;
+    background: #2D2D2D;
+    padding: 24px;
+    max-width: 346px;
+    margin-right: 40px;
+    flex-shrink: 0;
+
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-heading h1 {
+    color: #FFF;
+    font-family: Sora;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 120% */
+}
+
+.card span {
+    color: #FFF;
+    font-family: Sora;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.5px;
+    /* 150% */
+}
+
+.card p {
+    margin-top: 32px;
+    color: #FFF;
+    font-family: Sora;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+/* login section */
+
+.login-container {
+    display: flex; 
+    justify-content: space-between;
+    border-radius: 24px;
+    background: var(--yellow);
+    padding: 56px 80px; 
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 5%;
+    margin-top: 160px;
+    margin-bottom: 80px;
+
+}
+
+.login-container h2 {
+    color: #2F0C60;
+    font-family: Sora;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    flex-basis: 35%;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: stretch;
+    flex-basis: 25%;
+}
+
+
+/* footer */
+
+   
+.footer-container {
+    background-color: var(--yellow);
+    border-radius: 24px 24px 0 0;
+    padding: 80px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 160px;
+    margin-inline: 5%;
+
+}
+
+.logo-div {
+    flex-basis: 50%;
+}
+
+.logo-div img {
+    width: 240px;
+    margin-bottom: 76px;
+
+}
+
+.location-contact-div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.location-text-wrapper {
+    display: -webkit-box;
+    gap: 8px;
+}
+
+.location-text-wrapper img {
+    flex-basis: 10%;
+
+
+}
+
+.location-text-wrapper p {
+    flex-basis: 70%;
+    color: #2F0C60;
+    font-family: Sora;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.location-div {
+    flex-basis: 30%;
+}
+
+
+.footer-container h2 {
+    color: var(--Blue);
+    font-family: Sora;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 120% */
+    margin-bottom: 16px;
+}
+
+.contact-set {
+    display: flex;
+    gap: 12px;
+
+}
+
+.contact-set span {
+    color: var(--Blue);
+    font-family: Sora;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contact-us-div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.social-media {
+    display: flex;
+    gap: 30px;
+    margin-top: 28px;
+}
+
+.social-media img {
+    width: 24px;
+}
+
+.last-footer {
+    background-color: var(--yellow);
+    margin-inline: 5%;
+
+}
+
+.left-footer {
+    flex-basis: 40%;
+}
+
+.right-footer {
+    flex-basis: 80%;
+}
+
+.map-div img {
+    margin-top: 160px;
+    width: 100%;
+    
+}
+
+.last-footer img {
+    width: 100%;
+}
